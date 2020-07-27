@@ -13,5 +13,5 @@ ENV TOKEN="/var/run/secrets/kubernetes.io/serviceaccount/token"
 COPY maven/ /app/
 RUN chmod -R a+x /app/
 
-ENTRYPOINT ["/app/ready.py"]
+ENTRYPOINT ["/app/ready.py"] 
 CMD [""]
