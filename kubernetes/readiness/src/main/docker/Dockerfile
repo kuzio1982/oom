@@ -10,8 +10,8 @@ RUN pip install requests pyyaml kubernetes
 ENV CERT="/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
 ENV TOKEN="/var/run/secrets/kubernetes.io/serviceaccount/token"
 
-COPY maven/ /root/
-RUN chmod -R a+x /root/
+COPY maven/ /app/
+RUN chmod -R a+x /app/
 
-ENTRYPOINT ["/root/ready.py"]
+ENTRYPOINT ["/app/ready.py"]
 CMD [""]
